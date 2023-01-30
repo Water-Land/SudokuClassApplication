@@ -26,6 +26,10 @@ int HintCount = -1;
 void testgithubcommand()
 {
 }
+void testgithubcommand2()
+{
+	int a2 = 0;
+}
 
 void FileRead(char* filename)
 {
