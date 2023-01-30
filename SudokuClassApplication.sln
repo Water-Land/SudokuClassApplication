@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SudokuClassApplication", "SudokuClassApplication\SudokuClassApplication.vcxproj", "{D106BD12-B962-4789-84F9-BA13034EBEA4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NumberPlaceCreate", "NumberPlaceCreate\NumberPlaceCreate.vdproj", "{CAFD4D6D-C3A7-4C5C-A4DA-932CEAE7D2FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Debug|x64.ActiveCfg = Debug|x64
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Debug|x64.Build.0 = Debug|x64
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Debug|x86.ActiveCfg = Debug|Win32
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Debug|x86.Build.0 = Debug|Win32
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Release|x64.ActiveCfg = Release|x64
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Release|x64.Build.0 = Release|x64
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Release|x86.ActiveCfg = Release|Win32
+		{D106BD12-B962-4789-84F9-BA13034EBEA4}.Release|x86.Build.0 = Release|Win32
+		{CAFD4D6D-C3A7-4C5C-A4DA-932CEAE7D2FD}.Debug|x64.ActiveCfg = Debug
+		{CAFD4D6D-C3A7-4C5C-A4DA-932CEAE7D2FD}.Debug|x86.ActiveCfg = Debug
+		{CAFD4D6D-C3A7-4C5C-A4DA-932CEAE7D2FD}.Release|x64.ActiveCfg = Release
+		{CAFD4D6D-C3A7-4C5C-A4DA-932CEAE7D2FD}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D25F9D2A-FD59-4383-8B2B-17F51A23C69A}
+	EndGlobalSection
+EndGlobal
