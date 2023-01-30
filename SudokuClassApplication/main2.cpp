@@ -25,11 +25,6 @@ int HintCount = -1;
 
 void testgithubcommand()
 {
-	int a1 = 0;
-}
-void testgithubcommand2()
-{
-	int a1 = 0;
 }
 
 void FileRead(char* filename)
@@ -66,7 +61,6 @@ void FileReadMask(char* filename)
 	}
 	fclose(fp);
 	testgithubcommand();
-	testgithubcommand2();
 }
 void CopyData()
 {
@@ -152,7 +146,7 @@ void OnClick(int x, int y)
 			sudoku.setBoardValue(i, j, view.DataGet(j, i));
 		}
 	}
-	SetWindowTextW(hWnd, L"‰ğ“š‚ğn‚ß‚Ü‚·B");
+	SetWindowTextW(hWnd, L"è§£ç­”ã‚’å§‹ã‚ã¾ã™ã€‚");
 	bool flag=sudoku.solve();
 	for (int i = 0; i < 9; i++)
 	{
@@ -164,13 +158,13 @@ void OnClick(int x, int y)
 	InvalidateRect(hWnd, NULL, true);
 	if (flag == true)
 	{
-		MessageBoxA(NULL, "‰ğ‚¯‚Ü‚µ‚½B", "CHECKED", MB_OK);
+		MessageBoxA(NULL, "è§£ã‘ã¾ã—ãŸã€‚", "CHECKED", MB_OK);
 	}
 	if (flag == false)
 	{
-		MessageBoxA(NULL, "‰ğ‚¯‚Ü‚¹‚ñ‚Å‚µ‚½B", "CHECKED", MB_OK);
+		MessageBoxA(NULL, "è§£ã‘ã¾ã›ã‚“ã§ã—ãŸã€‚", "CHECKED", MB_OK);
 	}
-	SetWindowTextW(hWnd, L"‰ğ“š‚ğI‚í‚è‚Ü‚µ‚½B");
+	SetWindowTextW(hWnd, L"è§£ç­”ã‚’çµ‚ã‚ã‚Šã¾ã—ãŸã€‚");
 	
 }
 
@@ -197,7 +191,7 @@ void OnClose2()
 	edit.CopyDataTo(&view);
 	InvalidateRect(hWnd, NULL, true);
 }
-void OnCheck()//•¡”‰ğƒ`ƒFƒbƒN
+void OnCheck()//è¤‡æ•°è§£ãƒã‚§ãƒƒã‚¯
 {
 	SudokuPuzzle sol1;
 	SudokuPuzzle sol2;
@@ -231,17 +225,17 @@ void OnCheck()//•¡”‰ğƒ`ƒFƒbƒN
 	}
 	if (chk == false)
 	{
-		MessageBoxA(NULL, "d•¡‚µ‚Ä‚¢‚Ü‚·B", "CHECKED", MB_OK);
+		MessageBoxA(NULL, "é‡è¤‡ã—ã¦ã„ã¾ã™ã€‚", "CHECKED", MB_OK);
 	}
 	if (chk == true)
 	{
 		if (tchk == true)
 		{
-			MessageBoxA(NULL, "d•¡‚µ‚Ä‚¢‚Ü‚¹‚ñB", "CHECKED", MB_OK);
+			MessageBoxA(NULL, "é‡è¤‡ã—ã¦ã„ã¾ã›ã‚“ã€‚", "CHECKED", MB_OK);
 		}
 		if (tchk == false)
 		{
-			MessageBoxA(NULL, "‰ğ‚¯‚Ü‚¹‚ñ‚Å‚µ‚½B", "CHECKED", MB_OK);
+			MessageBoxA(NULL, "è§£ã‘ã¾ã›ã‚“ã§ã—ãŸã€‚", "CHECKED", MB_OK);
 		}
 
 		
