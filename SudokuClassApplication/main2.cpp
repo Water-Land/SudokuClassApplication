@@ -25,6 +25,8 @@ int HintCount = -1;
 
 void testgithubcommand()
 {
+
+	int test_a = 0;
 }
 void testgithubcommand2()
 {
