@@ -25,7 +25,11 @@ int HintCount = -1;
 
 void testgithubcommand()
 {
-
+	int a1 = 0;
+}
+void testgithubcommand2()
+{
+	int a1 = 0;
 }
 
 void FileRead(char* filename)
@@ -62,6 +66,7 @@ void FileReadMask(char* filename)
 	}
 	fclose(fp);
 	testgithubcommand();
+	testgithubcommand2();
 }
 void CopyData()
 {
