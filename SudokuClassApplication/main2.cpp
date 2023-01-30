@@ -23,10 +23,15 @@ extern INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPa
 bool filereadis;
 int HintCount = -1;
 
+void testgithubcommand()
+{
+	int test_a = 0;
+}
+
 void FileRead(char* filename)
 {
 	FILE* fp;
-	fopen_s(&fp,filename, "r");
+	fopen_s(&fp, filename, "r");
 	for (int i = 0; i < 9; i++)
 	{
 		for (int j = 0; j < 9; j++)
@@ -39,6 +44,24 @@ void FileRead(char* filename)
 		fscanf_s(fp, "%c", &num2);
 	}
 	fclose(fp);
+}
+void FileReadMask(char* filename)
+{
+	FILE* fp;
+	fopen_s(&fp, filename, "r");
+	for (int i = 0; i < 9; i++)
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			int num = 0;
+			fscanf_s(fp, "%c", &num);
+			view.DataMaskSet(j, i, num - '0');
+		}
+		int num2 = 0;
+		fscanf_s(fp, "%c", &num2);
+	}
+	fclose(fp);
+	testgithubcommand();
 }
 void CopyData()
 {
@@ -71,6 +94,29 @@ void FileReadCommand()
 	if (GetOpenFileNameA(&ofn) == TRUE)
 	{
 		FileRead((char*)ofn.lpstrFile);
+		CopyData();
+	}
+}
+void FileReadCommandMask()
+{
+	OPENFILENAMEA ofn;       // common dialog box structure
+	char szFile[260] = { 0 };       // if using TCHAR macros
+
+	// Initialize OPENFILENAME
+	ZeroMemory(&ofn, sizeof(ofn));
+	ofn.lStructSize = sizeof(ofn);
+	ofn.hwndOwner = hWnd;
+	ofn.lpstrFile = szFile;
+	ofn.nMaxFile = sizeof(szFile);
+	ofn.lpstrFilter = "All\0*.*\0Text\0*.TXT\0";
+	ofn.nFilterIndex = 1;
+	ofn.lpstrFileTitle = NULL;
+	ofn.nMaxFileTitle = 0;
+	ofn.lpstrInitialDir = NULL;
+	ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+	if (GetOpenFileNameA(&ofn) == TRUE)
+	{
+		FileReadMask((char*)ofn.lpstrFile);
 		CopyData();
 	}
 }

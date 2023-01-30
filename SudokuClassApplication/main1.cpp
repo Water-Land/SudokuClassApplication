@@ -26,6 +26,7 @@ extern void OnClick(int x, int y);
 extern void OnCheck();
 extern bool filereadis;
 extern void FileReadCommand();
+extern void FileReadCommandMask();
 extern void EditWindowCreate(bool chk1);
 extern void WindowDestroy();
 extern void MaskDataFlag(bool ch1);
@@ -197,6 +198,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             FileReadCommand();
             InvalidateRect(hWnd, NULL, true);
             //MessageBoxA(NULL, "", "", MB_OK);
+            break;
+        case 32789:
+            FileReadCommandMask();
+            InvalidateRect(hWnd, NULL, true);
             break;
         case 32772://マニュアル:
             EditWindowCreate(chk1);
