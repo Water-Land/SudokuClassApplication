@@ -73,4 +73,9 @@
       <Filter>リソース ファイル</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="testone.txt">
+      <Filter>ソース ファイル</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
