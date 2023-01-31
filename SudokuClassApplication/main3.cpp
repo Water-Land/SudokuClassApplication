@@ -23,17 +23,6 @@ extern INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPa
 bool filereadis;
 int HintCount = -1;
 
-void testgithubcommand()
-{
-	int test_a = 0;
-}
-void testgithubcommand2()
-{
-	int a2 = 0;
-	int a3 = 0;
-	int a4 = 0;
-}
-
 void FileRead(char* filename)
 {
 	FILE* fp;
@@ -67,7 +56,6 @@ void FileReadMask(char* filename)
 		fscanf_s(fp, "%c", &num2);
 	}
 	fclose(fp);
-	testgithubcommand();
 }
 void CopyData()
 {
